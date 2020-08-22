@@ -1,0 +1,6 @@
+plugin:
+    name: 'sasa.user::lang.plugin.name'
+    description: 'sasa.user::lang.plugin.description'
+    author: Sasa
+    icon: oc-icon-users
+    homepage: ''
