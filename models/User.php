@@ -28,4 +28,8 @@ class User extends Model
     public $belongsToMany = [
         'groups' =>  [Group::class, 'table' => 'sasa_user_user_group'],  
     ];
+
+    public $hasMany = [
+        'logins' => Login::class,
+    ];
 }
