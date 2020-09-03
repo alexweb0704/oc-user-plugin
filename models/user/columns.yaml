@@ -1,0 +1,74 @@
+columns:
+    id:
+        label: id
+        type: number
+        sortable: true
+    name:
+        label: 'geekslab.user::lang.models.user.name'
+        type: text
+        searchable: true
+        sortable: true
+    surname:
+        label: 'geekslab.user::lang.models.user.surname'
+        type: text
+        searchable: true
+        sortable: true
+    patronymic:
+        label: 'geekslab.user::lang.models.user.patronymic'
+        type: text
+        searchable: true
+        invisible: true
+        sortable: true
+    username:
+        label: 'geekslab.user::lang.models.user.username'
+        type: text
+        default: 'geekslab.user::lang.models.user.dont_setted'
+        searchable: true
+        invisible: false
+        sortable: true
+    email:
+        label: 'geekslab.user::lang.models.user.email'
+        type: text
+        default: 'geekslab.user::lang.models.user.dont_setted'
+        searchable: true
+        invisible: false
+        sortable: true
+    registered_at:
+        label: 'geekslab.user::lang.models.user.registered_at'
+        type: datetime
+        searchable: true
+        sortable: true
+    updated_at:
+        label: 'geekslab.user::lang.general.updated_at'
+        type: datetime
+        searchable: true
+        invisible: true
+        sortable: true
+    activated_at:
+        label: 'geekslab.user::lang.models.user.activated_at'
+        type: datetime
+        default: 'geekslab.user::lang.models.user.dont_activated'
+        searchable: true
+        invisible: true
+        sortable: true
+    logined_at:
+        label: 'geekslab.user::lang.models.user.logined_at'
+        type: datetime
+        default: 'geekslab.user::lang.models.user.dont_login'
+        searchable: true
+        invisible: true
+        sortable: true
+    last_seen_at:
+        label: 'geekslab.user::lang.models.user.last_seen_at'
+        type: datetime
+        default: 'geekslab.user::lang.models.user.dont_last_seen'
+        searchable: true
+        invisible: true
+        sortable: true
+    banned_at:
+        label: 'geekslab.user::lang.models.user.banned_at'
+        type: datetime
+        default: 'geekslab.user::lang.models.user.dont_banned'
+        searchable: true
+        invisible: true
+        sortable: true

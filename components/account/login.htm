@@ -1,0 +1,29 @@
+<h3>Авторизация</h3>
+<form class="row g-3">
+    <div class="col-md-12">
+        <label for="emailField" class="form-label">Логин</label>
+        {% if settings.loginAttributes | length == 1 %}
+            <input name="login" 
+                    type="{{ settings.loginAttributes.0 == 'email' ? 'email' : 'text' }}" 
+                    class="form-control" id="emailField"
+                    placeholder="{{ settings.loginFormPlaceholder }}">
+        {% else %}
+            <input name="login" type="text" class="form-control" id="emailField">
+        {% endif %}
+    </div>
+    <div class="col-md-12">
+        <label for="passwordField" class="form-label">Password</label>
+        <input type="password" class="form-control" id="passwordField">
+    </div>
+    <div class="col-md-12">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rememberMeField">
+            <label class="form-check-label" for="rememberMeField">
+                Запомнить меня
+            </label>
+        </div>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Войти</button>
+    </div>
+</form>

@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    loginAttributes:
+        label: 'geekslab.user::lang.settings.loginAttributes.label'
+        comment: 'geekslab.user::lang.settings.loginAttributes.description'
+        type: checkboxlist
+        span: auto
+        default: 'username'
+    rememberMe:
+        label: 'geekslab.user::lang.settings.rememberMe.label'
+        comment: 'geekslab.user::lang.settings.rememberMe.description'
+        type: radio
+        options:
+            ask: 'geekslab.user::lang.settings.rememberMe.options.ask'
+            always: 'geekslab.user::lang.settings.rememberMe.options.always'
+            never: 'geekslab.user::lang.settings.rememberMe.options.never'
+        span: auto

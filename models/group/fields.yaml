@@ -1,0 +1,21 @@
+fields:
+    is_active:
+        label: 'geekslab.user::lang.models.group.is_active'
+        span: full
+        type: switch
+    name:
+        label: 'geekslab.user::lang.models.group.name'
+        span: auto
+        type: text
+    code:
+        label: 'geekslab.user::lang.models.group.code'
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    description:
+        label: 'geekslab.user::lang.models.group.description'
+        size: large
+        span: full
+        type: richeditor

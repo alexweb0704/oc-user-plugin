@@ -1,0 +1,10 @@
+name: Users
+form: $/geekslab/user/models/user/fields.yaml
+modelClass: GeeksLab\User\Models\User
+defaultRedirect: geekslab/user/users
+create:
+    redirect: 'geekslab/user/users/update/:id'
+    redirectClose: geekslab/user/users
+update:
+    redirect: geekslab/user/users
+    redirectClose: geekslab/user/users

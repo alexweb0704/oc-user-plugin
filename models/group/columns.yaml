@@ -1,0 +1,42 @@
+columns:
+    id:
+        label: id
+        type: number
+    name:
+        label: 'geekslab.user::lang.models.group.name'
+        type: text
+        searchable: true
+    code:
+        label: 'geekslab.user::lang.models.group.code'
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: 'geekslab.user::lang.models.group.description'
+        type: text
+        searchable: true
+        invisible: true
+    is_active:
+        label: 'geekslab.user::lang.models.group.is_active'
+        type: switch
+        sortable: true
+    sort_order:
+        label: 'geekslab.user::lang.general.sort_order'
+        type: number
+        invisible: true
+        sortable: true
+    created_at:
+        label: 'geekslab.user::lang.general.created_at'
+        type: datetime
+        searchable: true
+        sortable: true
+    updated_at:
+        label: 'geekslab.user::lang.general.updated_at'
+        type: datetime
+        invisible: true
+        sortable: true
+    deleted_at:
+        label: 'geekslab.user::lang.general.deleted_at'
+        type: datetime
+        invisible: false
+        sortable: true

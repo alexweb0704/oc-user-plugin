@@ -1,0 +1,12 @@
+title: Users
+modelClass: GeeksLab\User\Models\User
+list: $/geekslab/user/models/user/columns.yaml
+recordUrl: 'geekslab/user/users/preview/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

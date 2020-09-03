@@ -1,0 +1,50 @@
+fields:
+    name:
+        label: 'geekslab.user::lang.models.user.name'
+        span: auto
+        type: text
+    surname:
+        label: 'geekslab.user::lang.models.user.surname'
+        span: auto
+        type: text
+    patronymic:
+        label: 'geekslab.user::lang.models.user.patronymic'
+        span: auto
+        type: text
+tabs:
+    fields:
+        username:
+            label: 'geekslab.user::lang.models.user.username'
+            span: auto
+            type: text
+            tab: 'geekslab.user::lang.models.user.tabs.profile'
+        email:
+            label: 'geekslab.user::lang.models.user.email'
+            span: auto
+            type: text
+            tab: 'geekslab.user::lang.models.user.tabs.profile'
+        password:
+            label: 'geekslab.user::lang.models.user.password'
+            span: auto
+            type: password
+            context: create|update
+            tab: 'geekslab.user::lang.models.user.tabs.profile'
+        password_confirmation:
+            label: 'geekslab.user::lang.models.user.password_confirmation'
+            span: auto
+            type: password
+            context: create|update
+            tab: 'geekslab.user::lang.models.user.tabs.profile'
+        groups:
+            label: 'geekslab.user::lang.models.user.groups'
+            span: auto
+            nameFrom: name
+            descriptionFrom: description
+            type: relation
+            tab: 'geekslab.user::lang.models.user.tabs.profile'
+secondaryTabs:
+    fields:
+        avatar:
+            label: 'geekslab.user::lang.models.user.avatar'
+            type: fileupload
+            mode: image

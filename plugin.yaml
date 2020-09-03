@@ -1,6 +1,32 @@
 plugin:
-    name: 'sasa.user::lang.plugin.name'
-    description: 'sasa.user::lang.plugin.description'
-    author: Sasa
+    name: 'geekslab.user::lang.plugin.name'
+    description: 'geekslab.user::lang.plugin.description'
+    author: GeeksLab
     icon: oc-icon-users
     homepage: ''
+permissions:
+    manage_geekslab_user_groups:
+        tab: 'geekslab.user::lang.models.user.name'
+        label: 'geekslab.user::lang.permissions.manage_groups'
+    manage_geekslab_user_users:
+        tab: 'geekslab.user::lang.plugin.name'
+        label: 'geekslab.user::lang.permissions.manage_users'
+navigation:
+    geekslab-user-main-menu:
+        label: 'geekslab.user::lang.menu.main-menu'
+        url: geekslab/user/users
+        icon: icon-user-secret
+        permissions: {  }
+        sideMenu:
+            geekslab-user-users:
+                label: 'geekslab.user::lang.menu.users'
+                url: geekslab/user/users
+                icon: icon-user
+                permissions:
+                    - manage_geekslab_user_users
+            geekslab-user-groups:
+                label: 'geekslab.user::lang.menu.groups'
+                url: geekslab/user/groups
+                icon: icon-users
+                permissions:
+                    - manage_geekslab_user_groups

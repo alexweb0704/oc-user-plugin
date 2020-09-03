@@ -1,14 +1,11 @@
 1.0.1:
     - 'Initialize plugin.'
 1.0.2:
-    - 'Created table sasa_user_users'
-    - builder_table_create_sasa_user_users.php
+    - 'Created table geekslab_user_users'
+    - builder_table_create_geeks_lab_user_users.php
 1.0.3:
-    - 'Created table sasa_user_logins'
-    - builder_table_create_sasa_user_logins.php
-1.0.4:
-    - 'Created table sasa_user_groups'
-    - builder_table_create_sasa_user_groups.php
+    - 'Created table geekslab_user_groups'
+    - builder_table_create_geeks_lab_user_groups.php
 1.0.5:
-    - 'Created table sasa_user_user_group'
-    - builder_table_create_sasa_user_user_group.php
+    - 'Created table geekslab_user_user_group'
+    - builder_table_create_geeks_lab_user_user_group.php

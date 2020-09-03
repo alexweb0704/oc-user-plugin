@@ -1,0 +1,12 @@
+name: Groups
+modelClass: GeeksLab\User\Models\Group
+form: $/geekslab/user/models/group/fields.yaml
+defaultRedirect: geekslab/user/groups
+create:
+    redirect: 'geekslab/user/groups/update/:id'
+    redirectClose: geekslab/user/groups
+update:
+    redirect: geekslab/user/groups
+    redirectClose: geekslab/user/groups
+preview:
+    title: Просмотр

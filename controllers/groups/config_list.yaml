@@ -1,0 +1,12 @@
+title: Groups
+modelClass: GeeksLab\User\Models\Group
+list: $/geekslab/user/models/group/columns.yaml
+recordUrl: 'geekslab/user/groups/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

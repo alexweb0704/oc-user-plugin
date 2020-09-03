@@ -1,0 +1,4 @@
+title: Groups
+modelClass: GeeksLab\User\Models\Group
+toolbar:
+    buttons: reorder_toolbar

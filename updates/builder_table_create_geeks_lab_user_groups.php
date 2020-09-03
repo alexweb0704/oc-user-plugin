@@ -1,18 +1,20 @@
-<?php namespace Sasa\User\Updates;
+<?php
+
+namespace GeeksLab\User\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableCreateSasaUserGroups extends Migration
+class BuilderTableCreateGeeksLabUserGroups extends Migration
 {
     public function up()
     {
-        Schema::create('sasa_user_groups', function($table)
-        {
+        Schema::create('geekslab_user_groups', function ($table) {
+
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->string('name');
-            $table->string('code')->unique();
+            $table->string('code')->unique()->index();
             $table->text('description')->nullable();
             $table->boolean('is_active')->default(0);
             $table->integer('sort_order')->nullable();
@@ -24,6 +26,6 @@ class BuilderTableCreateSasaUserGroups extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('sasa_user_groups');
+        Schema::dropIfExists('geekslab_user_groups');
     }
 }
