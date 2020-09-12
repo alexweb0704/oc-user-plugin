@@ -4,7 +4,9 @@ namespace GeeksLab\User\Components;
 
 use Cms\Classes\ComponentBase;
 use Cms\Classes\Page;
+use ValidationException;
 use GeeksLab\User\Models;
+use Input;
 
 class Account extends ComponentBase
 {
@@ -32,24 +34,6 @@ class Account extends ComponentBase
                 'default'     => 'all',
 
             ],
-            // 'paramCode' => [
-            //     'title'       => /*Activation Code Param*/'rainlab.user::lang.account.code_param',
-            //     'description' => /*The page URL parameter used for the registration activation code*/ 'rainlab.user::lang.account.code_param_desc',
-            //     'type'        => 'string',
-            //     'default'     => 'code'
-            // ],
-            // 'forceSecure' => [
-            //     'title'       => /*Force secure protocol*/'rainlab.user::lang.account.force_secure',
-            //     'description' => /*Always redirect the URL with the HTTPS schema.*/'rainlab.user::lang.account.force_secure_desc',
-            //     'type'        => 'checkbox',
-            //     'default'     => 0
-            // ],
-            // 'requirePassword' => [
-            //     'title'       => /*Confirm password on update*/'rainlab.user::lang.account.update_requires_password',
-            //     'description' => /*Require the current password of the user when changing their profile.*/'rainlab.user::lang.account.update_requires_password_comment',
-            //     'type'        => 'checkbox',
-            //     'default'     => 0
-            // ],
         ];
     }
 
@@ -84,8 +68,30 @@ class Account extends ComponentBase
     public function prepareSettings()
     {
         return [
-            'loginAttributes' => Models\Settings::get('loginAttributes', ['login']),
+            'loginAttributes' => Models\Settings::get('loginAttributes', ['username']),
             'loginFormPlaceholder' => Models\Settings::get('loginFormPlaceholder', 'Введите логин')
         ];
+    }
+
+    public function onLogin()
+    {
+        $data = Input::all();
+
+        $rules = [
+            'login' => 'required',
+            'password' => 'required',
+        ];
+        
+        $validation = \Validator::make($data, $rules);
+
+        if ($validation->fails()) {
+            throw new ValidationException($validation);
+        }
+
+        $credentials = array_only($data, ['login', 'password']);
+        $remember = array_get($data, 'rememberMe', false);
+        \GAuth::authenticate($credentials, $remember);
+        
+        //\GAuth::login($user, true);
     }
 }

@@ -1,0 +1,15 @@
+{
+    "name": "geekslab/oc-user-plugin",
+    "type": "october-plugin",
+    "require": {
+        "tymon/jwt-auth": "1.0.0-rc.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sasha Raimov",
+            "email": "alexweb.geekslab@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

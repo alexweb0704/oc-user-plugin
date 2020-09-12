@@ -6,7 +6,7 @@ plugin:
     homepage: ''
 permissions:
     manage_geekslab_user_groups:
-        tab: 'geekslab.user::lang.models.user.name'
+        tab: 'geekslab.user::lang.plugin.name'
         label: 'geekslab.user::lang.permissions.manage_groups'
     manage_geekslab_user_users:
         tab: 'geekslab.user::lang.plugin.name'
@@ -16,7 +16,9 @@ navigation:
         label: 'geekslab.user::lang.menu.main-menu'
         url: geekslab/user/users
         icon: icon-user-secret
-        permissions: {  }
+        permissions: 
+            - manage_geekslab_user_users
+            - manage_geekslab_user_groups
         sideMenu:
             geekslab-user-users:
                 label: 'geekslab.user::lang.menu.users'

@@ -27,13 +27,17 @@ tabs:
             label: 'geekslab.user::lang.models.user.password'
             span: auto
             type: password
-            context: create|update
+            context: 
+                - create
+                - update
             tab: 'geekslab.user::lang.models.user.tabs.profile'
         password_confirmation:
             label: 'geekslab.user::lang.models.user.password_confirmation'
             span: auto
             type: password
-            context: create|update
+            context: 
+                - create
+                - update
             tab: 'geekslab.user::lang.models.user.tabs.profile'
         groups:
             label: 'geekslab.user::lang.models.user.groups'

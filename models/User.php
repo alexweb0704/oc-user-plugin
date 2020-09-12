@@ -151,4 +151,9 @@ class User extends Model
     public $attachOne = [
         'avatar' => \System\Models\File::class,
     ];
+
+    public function checkPassword($password)
+    {
+        return $this->checkHashValue('password', $password);
+    }
 }
